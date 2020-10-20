@@ -7,12 +7,12 @@ import NotFound from '../elements/NotFound/NotFound';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/review-Movie/">
       <React.Fragment>
         <Header/>
         <Switch>
-          <Route path="/review-Movie" component={Home} exact />
-          <Route path="review-Movie/:movieId" component={Movie} exact />
+          <Route path="/" component={Home} exact />
+          <Route path="/:movieId" component={Movie} exact />
           <Route component={NotFound} />
         </Switch>
       </React.Fragment>
